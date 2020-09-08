@@ -20,11 +20,14 @@ constraint c_foreach {
                       }
 }
 
-constrait c_sum {
+constraint c_sum {
                   bq_size inside {[10:20]};
                   (bq.sum with (int'(item))) == 7;
                   (a.sum with ((item.index < 3)?item:0) ==10;                  
                   }
-                  
+              
+                   x dist  {[0:10]:=20, [11:40]:=30, [41:50]:/20};
+  
+                   
 enclass 
 
